@@ -1,0 +1,233 @@
+{
+  "data": {
+    "currency": "USD",
+    "description": null,
+    "total": 3726,
+    "basePrice": 3726,
+    "damageDeposit": 0,
+    "damageDepositSplitMethod": null,
+    "bookableType": "enquiry_with_price",
+    "adjustments": [],
+    "stayBreakdown": {
+      "arrivalDate": "2019-02-01",
+      "departureDate": "2019-02-28",
+      "bookingDate": "2019-01-20",
+      "noNights": 27,
+      "guests": 2,
+      "adults": null,
+      "children": null,
+      "infants": null,
+      "daysBeforeArrival": 12,
+      "extras": [],
+      "nights": {
+        "2019-02-01": {
+          "date": "2019-02-01",
+          "dayOfWeek": "friday",
+          "cost": 0,
+          "period": null,
+          "modifiers": []
+        },
+        "2019-02-02": {
+          "date": "2019-02-02",
+          "dayOfWeek": "saturday",
+          "cost": 0,
+          "period": null,
+          "modifiers": []
+        },
+        "2019-02-03": {
+          "date": "2019-02-03",
+          "dayOfWeek": "sunday",
+          "cost": 0,
+          "period": null,
+          "modifiers": []
+        },
+        "2019-02-04": {
+          "date": "2019-02-04",
+          "dayOfWeek": "monday",
+          "cost": 0,
+          "period": null,
+          "modifiers": []
+        },
+        "2019-02-05": {
+          "date": "2019-02-05",
+          "dayOfWeek": "tuesday",
+          "cost": 0,
+          "period": null,
+          "modifiers": []
+        },
+        "2019-02-06": {
+          "date": "2019-02-06",
+          "dayOfWeek": "wednesday",
+          "cost": 0,
+          "period": null,
+          "modifiers": []
+        },
+        "2019-02-07": {
+          "date": "2019-02-07",
+          "dayOfWeek": "thursday",
+          "cost": 0,
+          "period": null,
+          "modifiers": []
+        },
+        "2019-02-08": {
+          "date": "2019-02-08",
+          "dayOfWeek": "friday",
+          "cost": 0,
+          "period": null,
+          "modifiers": []
+        },
+        "2019-02-09": {
+          "date": "2019-02-09",
+          "dayOfWeek": "saturday",
+          "cost": 0,
+          "period": null,
+          "modifiers": []
+        },
+        "2019-02-10": {
+          "date": "2019-02-10",
+          "dayOfWeek": "sunday",
+          "cost": 0,
+          "period": null,
+          "modifiers": []
+        },
+        "2019-02-11": {
+          "date": "2019-02-11",
+          "dayOfWeek": "monday",
+          "cost": 0,
+          "period": null,
+          "modifiers": []
+        },
+        "2019-02-12": {
+          "date": "2019-02-12",
+          "dayOfWeek": "tuesday",
+          "cost": 0,
+          "period": null,
+          "modifiers": []
+        },
+        "2019-02-13": {
+          "date": "2019-02-13",
+          "dayOfWeek": "wednesday",
+          "cost": 0,
+          "period": null,
+          "modifiers": []
+        },
+        "2019-02-14": {
+          "date": "2019-02-14",
+          "dayOfWeek": "thursday",
+          "cost": 0,
+          "period": null,
+          "modifiers": []
+        },
+        "2019-02-15": {
+          "date": "2019-02-15",
+          "dayOfWeek": "friday",
+          "cost": 0,
+          "period": null,
+          "modifiers": []
+        },
+        "2019-02-16": {
+          "date": "2019-02-16",
+          "dayOfWeek": "saturday",
+          "cost": 0,
+          "period": null,
+          "modifiers": []
+        },
+        "2019-02-17": {
+          "date": "2019-02-17",
+          "dayOfWeek": "sunday",
+          "cost": 0,
+          "period": null,
+          "modifiers": []
+        },
+        "2019-02-18": {
+          "date": "2019-02-18",
+          "dayOfWeek": "monday",
+          "cost": 0,
+          "period": null,
+          "modifiers": []
+        },
+        "2019-02-19": {
+          "date": "2019-02-19",
+          "dayOfWeek": "tuesday",
+          "cost": 0,
+          "period": null,
+          "modifiers": []
+        },
+        "2019-02-20": {
+          "date": "2019-02-20",
+          "dayOfWeek": "wednesday",
+          "cost": 0,
+          "period": null,
+          "modifiers": []
+        },
+        "2019-02-21": {
+          "date": "2019-02-21",
+          "dayOfWeek": "thursday",
+          "cost": 0,
+          "period": null,
+          "modifiers": []
+        },
+        "2019-02-22": {
+          "date": "2019-02-22",
+          "dayOfWeek": "friday",
+          "cost": 0,
+          "period": null,
+          "modifiers": []
+        },
+        "2019-02-23": {
+          "date": "2019-02-23",
+          "dayOfWeek": "saturday",
+          "cost": 0,
+          "period": null,
+          "modifiers": []
+        },
+        "2019-02-24": {
+          "date": "2019-02-24",
+          "dayOfWeek": "sunday",
+          "cost": 0,
+          "period": null,
+          "modifiers": []
+        },
+        "2019-02-25": {
+          "date": "2019-02-25",
+          "dayOfWeek": "monday",
+          "cost": 0,
+          "period": null,
+          "modifiers": []
+        },
+        "2019-02-26": {
+          "date": "2019-02-26",
+          "dayOfWeek": "tuesday",
+          "cost": 0,
+          "period": null,
+          "modifiers": []
+        },
+        "2019-02-27": {
+          "date": "2019-02-27",
+          "dayOfWeek": "wednesday",
+          "cost": 0,
+          "period": null,
+          "modifiers": []
+        }
+      }
+    },
+    "splitDetails": null,
+    "errors": [],
+    "isAvailable": true,
+    "isPriced": true,
+    "messages": [],
+    "origin": {
+      "available": true,
+      "availability": "YYYYYYYYYYYYYYYYYYYYYYYYYYY",
+      "messages": "",
+      "rates": [{
+        "rateplan": "2 bedroom",
+        "currency": "USD",
+        "minStay": "3",
+        "total": "3726"
+      }]
+    },
+    "pairings": [],
+    "termsAndConditions": null
+  }
+}

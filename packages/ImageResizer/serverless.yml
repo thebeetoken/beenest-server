@@ -1,0 +1,35 @@
+service: ImageResizer
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: production
+  region: us-west-2
+
+plugins:
+  - serverless-offline
+  - serverless-apigw-binary
+  - serverless-apigwy-binary
+
+custom:
+  apigwBinary:
+    types:           #list of mime-types
+      - 'image/jpeg'
+      - 'image/png'
+      - 'image/webp'
+      - 'text/json'
+      - '*/*'
+
+functions:
+  app:
+    handler: index.handler
+    events:
+      - http:
+          path: scale
+          method: get
+          contentHandling: CONVERT_TO_BINARY
+          request:
+            parameters:
+              query:
+                url: true
+

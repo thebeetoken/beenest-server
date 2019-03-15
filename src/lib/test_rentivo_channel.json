@@ -1,0 +1,54 @@
+{
+  "data": {
+    "id": "00087131-e86e-4f8c-b776-55792a933883",
+    "master": {
+      "id": "e7cfdc75-d810-44ae-90b9-a6324f398552",
+      "providerListingId": "d49fdfe7f6adc458acde323e3583f7c4d5e2842d08d21624f95706b8c50bcae5f269f8025b32b8c7ef053e640e2dd685eae7766f47c2af72b7aafc981c04652e",
+      "providerPublicURL": null
+    },
+    "createdAt": "2019-01-17T18:33:48+00:00",
+    "updatedAt": "2019-01-17T18:33:48+00:00",
+    "descriptiveName": "Ratu Villa",
+    "providerListingId": null,
+    "providerPublicURL": null,
+    "arePoliciesValid": true,
+    "staySynchronizeWithMaster": null,
+    "synchronizationMode": "SYNCHRONIZATION_MODE_FULL",
+    "policiesError": null,
+    "listingImportId": null,
+    "listingStatus": null,
+    "statusNotes": null,
+    "userMutations": null,
+    "channel": {
+      "id": "b5783f28-9be8-4545-827b-b72e44fdef81",
+      "descriptiveName": "BeeNest",
+      "defaultSettings": {
+        "id": "d48ac9ec-96f9-46a6-8fcc-4e69821c640c",
+        "bookingSource": null,
+        "descriptiveName": "(C) BeeNest Settings",
+        "logo": {
+          "id": "199",
+          "publicUrl": "https://s3-eu-west-1.amazonaws.com/lycan-general/uploads/logo/0001/01/785332dfd6241543f3c6c51470164d63fbf55012.png",
+          "width": 689,
+          "height": 120
+        },
+        "brandCompanyName": "Eats and Retreats",
+        "website": "https://www.eatsandretreats.com/",
+        "biography": "Travel South East Asia in style with our portfolio of over 1,000 luxury villas throughout Thailand, Bali & Sri Lanka",
+        "phone": null,
+        "emails": [
+          "reservation@eatsandretreats.com"
+        ]
+      },
+      "baseUrl": null,
+      "defaultPriceCalculationStrategy": "HIGHEST_RATE",
+      "discr": "brand",
+      "_links": {
+        "channels:listings": {
+          "href": "/api/channels/b5783f28-9be8-4545-827b-b72e44fdef81/listings"
+        }
+      }
+    },
+    "discr": "listing"
+  }
+}

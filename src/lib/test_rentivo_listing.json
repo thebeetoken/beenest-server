@@ -1,0 +1,570 @@
+{
+  "data": {
+    "id": "00087131-e86e-4f8c-b776-55792a933883",
+    "createdAt": "2019-01-17T18:33:48+00:00",
+    "updatedAt": "2019-02-04T18:11:52+00:00",
+    "schemaObject": {
+      "$locale": "en_GB",
+      "$providerListingId": "d49fdfe7f6adc458acde323e3583f7c4d5e2842d08d21624f95706b8c50bcae5f269f8025b32b8c7ef053e640e2dd685eae7766f47c2af72b7aafc981c04652e",
+      "_debug": {
+        "unmapped": {
+          "features": [
+            "On The Beach",
+            "Security",
+            "Maid",
+            "Chef",
+            "Air Condition",
+            "King Size bed",
+            "Single bed",
+            "Bed Linen and Towels",
+            "Dish washer",
+            "Pots and Pans",
+            "Air conditioning",
+            "Parking available",
+            "Sun beds / chairs"
+          ]
+        }
+      },
+      "address": {
+        "addressLine1": "",
+        "city": "Ambalagonda",
+        "countryISO2": "LK",
+        "displayExactLocation": true,
+        "zipPostCode": ""
+      },
+      "features": [
+        {
+          "+mappedFrom": {
+            "cost": 0,
+            "name": "Internet",
+            "score": 0
+          },
+          "category": "Amenities",
+          "type": "COMMUNICATION_INTERNET"
+        },
+        {
+          "+mappedFrom": {
+            "cost": 0,
+            "name": "Hairdryer",
+            "score": 0
+          },
+          "category": "Amenities",
+          "type": "GENERAL_HAIRDRYER"
+        },
+        {
+          "+mappedFrom": {
+            "cost": 0,
+            "name": "Kitchen",
+            "score": 0
+          },
+          "category": "Amenities",
+          "type": "KITCHEN_KITCHEN_FULL"
+        },
+        {
+          "+mappedFrom": {
+            "cost": 0,
+            "name": "Freezer",
+            "score": 0
+          },
+          "category": "Amenities",
+          "type": "KITCHEN_FREEZER_STANDALONE"
+        },
+        {
+          "+mappedFrom": {
+            "cost": 0,
+            "name": "Fridge",
+            "score": 0
+          },
+          "category": "Amenities",
+          "type": "KITCHEN_FRIDGE_FREEZER"
+        },
+        {
+          "+mappedFrom": {
+            "cost": 0,
+            "name": "Blender",
+            "score": 0
+          },
+          "category": "Amenities",
+          "type": "KITCHEN_BLENDER"
+        },
+        {
+          "+mappedFrom": {
+            "cost": 0,
+            "name": "Garden",
+            "score": 0
+          },
+          "category": "Amenities",
+          "type": "GENERAL_GARDEN"
+        }
+      ],
+      "flags": {
+        "isActive": true,
+        "isDeleted": false,
+        "isInstantBookable": true
+      },
+      "listing": {
+        "arrangement": "ENTIRE_LISTING",
+        "bathrooms": 1,
+        "bedrooms": 2,
+        "housekeeping": "NON_PROVIDED",
+        "maxOccupancy": 5,
+        "meals": "NON_PROVIDED",
+        "sleeps": 4,
+        "type": "LISTING_TYPE_VILLA"
+      },
+      "location": {
+        "displayExactLocation": true,
+        "latitude": 6.226649,
+        "longitude": 80.05399899999998
+      },
+      "media": [
+        {
+          "category": "LINK",
+          "isListingPage": true,
+          "type": "URI",
+          "uri": "https://www.eatsandretreats.com/villas/villa6315.html"
+        },
+        {
+          "category": "PHOTO",
+          "position": "1",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689281.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "2",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689282.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "3",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689283.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "4",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689285.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "5",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689286.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "6",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689288.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "7",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689289.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "8",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689290.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "9",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689292.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "10",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689293.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "11",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689294.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "12",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689295.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "13",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689296.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "14",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689297.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "15",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689298.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "16",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689299.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "17",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689300.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "18",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689301.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "19",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689302.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "20",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689303.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "21",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689305.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "22",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689306.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "23",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689308.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "24",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689309.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "25",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689310.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "26",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689311.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "27",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689312.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "28",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689313.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "29",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689314.jpg"
+        },
+        {
+          "category": "PHOTO",
+          "position": "30",
+          "type": "URI",
+          "uri": "https://images.klik.villas/sri-lanka/villa6315/villa6315-pic1525689315.jpg"
+        }
+      ],
+      "name": "Ratu Villa",
+      "policies": [
+        {
+          "description": {
+            "en": {
+              "content": "A downpayment of 50% has to be made for each reservation. The remaining 50% is due to be paid one month prior to arrival.",
+              "locale": "en"
+            }
+          },
+          "type": "BOOKING_TERMS"
+        },
+        {
+          "description": {
+            "en": {
+              "content": "Cancel up to 7 days before check in and get a 50% refund (minus service fees). Cancel within 7 days of your trip and the reservation is non-refundable. Service fees are refunded when cancellation happens before check in and within 48 hours of booking.",
+              "locale": "en"
+            }
+          },
+          "type": "CANCELLATION_TERMS"
+        },
+        {
+          "description": {
+            "en": {
+              "content": "* Breakfast<br />* Service charge and tax<br />* check-in from 14:00 and check-out before 11:00",
+              "locale": "en"
+            }
+          },
+          "type": "RATE_INCLUDES"
+        },
+        {
+          "description": {
+            "en": {
+              "content": "* Airport transfer (65USD) with AC minivan<br />* Lunch and Dinner<br />* Babysitter",
+              "locale": "en"
+            }
+          },
+          "type": "RATE_EXCLUDES"
+        }
+      ],
+      "pricing": {
+        "dynamic": {
+          "data": [
+            {
+              "currency": "USD",
+              "defaults": {
+                "balanceDaysBeforeArrival": 42,
+                "damageDeposit": "0",
+                "damageDepositCalculationMethod": "fixed",
+                "damageDepositSplitMethod": "ON_DEPOSIT",
+                "daysRequiredInAdvanceForBooking": 0,
+                "depositSplitPercentage": "50",
+                "extraNightAlterationStrategyUseGlobalNights": false,
+                "minimumNights": "3"
+              },
+              "modifiers": [
+                {
+                  "conditionOperand": "AND",
+                  "conditions": [],
+                  "description": "Cleaning",
+                  "hidden": false,
+                  "rate": {
+                    "amount": 0,
+                    "applicableTaxes": [],
+                    "calculationMethod": "fixed",
+                    "calculationOperand": "addition",
+                    "type": "adjustment"
+                  },
+                  "splitMethod": "ON_TOTAL",
+                  "type": "cleaning"
+                }
+              ],
+              "periods": [
+                {
+                  "bookableType": null,
+                  "conditionOperand": "AND",
+                  "conditions": [
+                    {
+                      "arrivalDays": [],
+                      "departureDays": [],
+                      "endDate": "2019-11-30",
+                      "modifyRatePerUnit": false,
+                      "startDate": "2019-01-06",
+                      "type": "date"
+                    }
+                  ],
+                  "description": "Low Season",
+                  "minimumNights": 3,
+                  "priority": 500,
+                  "rate": {
+                    "amount": 138,
+                    "applicableTaxes": [],
+                    "calculationMethod": "fixed",
+                    "calculationOperand": "equals",
+                    "type": "nightly"
+                  }
+                },
+                {
+                  "bookableType": null,
+                  "conditionOperand": "AND",
+                  "conditions": [
+                    {
+                      "arrivalDays": [],
+                      "departureDays": [],
+                      "endDate": "2020-01-05",
+                      "modifyRatePerUnit": false,
+                      "startDate": "2019-12-01",
+                      "type": "date"
+                    }
+                  ],
+                  "description": "High Season",
+                  "minimumNights": 5,
+                  "priority": 500,
+                  "rate": {
+                    "amount": 155,
+                    "applicableTaxes": [],
+                    "calculationMethod": "fixed",
+                    "calculationOperand": "equals",
+                    "type": "nightly"
+                  }
+                },
+                {
+                  "bookableType": null,
+                  "conditionOperand": "AND",
+                  "conditions": [
+                    {
+                      "arrivalDays": [],
+                      "departureDays": [],
+                      "endDate": "2020-11-30",
+                      "modifyRatePerUnit": false,
+                      "startDate": "2020-01-06",
+                      "type": "date"
+                    }
+                  ],
+                  "description": "Low Season",
+                  "minimumNights": 3,
+                  "priority": 500,
+                  "rate": {
+                    "amount": 138,
+                    "applicableTaxes": [],
+                    "calculationMethod": "fixed",
+                    "calculationOperand": "equals",
+                    "type": "nightly"
+                  }
+                }
+              ],
+              "taxes": []
+            }
+          ],
+          "meta": [],
+          "name": "Pricing",
+          "schema": "property-pricing",
+          "version": "0.0.1"
+        },
+        "static": {
+          "currency": "USD",
+          "ranges": [
+            {
+              "endDate": "2019-11-30",
+              "name": "Low Season",
+              "standardNightPrice": 138,
+              "startDate": "2019-01-06"
+            },
+            {
+              "endDate": "2020-01-05",
+              "name": "High Season",
+              "standardNightPrice": 155,
+              "startDate": "2019-12-01"
+            },
+            {
+              "endDate": "2020-11-30",
+              "name": "Low Season",
+              "standardNightPrice": 138,
+              "startDate": "2020-01-06"
+            }
+          ]
+        },
+        "visual": {
+          "currency": "USD",
+          "nightlyHigh": "155",
+          "nightlyLow": "138"
+        }
+      },
+      "texts": [
+        {
+          "description": {
+            "en": {
+              "content": "A beachfront villa is the perfect ingredient to the perfect holiday since you have the golden sand and the cool water right at your doorstep. Lounge on the beach chairs as you gaze at the ocean or sunbathe, to feel utterly relaxed and at ease. The clear blue skies are conducive to a heady tranquility that you’ll soon get used to. Enjoy a relaxing morning with family and friends as you swim and frolic on the beach, building sandcastles and what not. With fishermen being your only point of contact, and that too only rarely, you have all the place to yourself! Dine beside the water for a truly enchanting experience.<br /><br />A beautifully and aesthetically designed living area is what greets you as you step inside through the wooden, antique doorway. The terrace is furnished with a dining area, and the indoors is furnished with comfortable couches and chairs for relaxation. There are antique cabinets and trinkets placed inside the room to give it a rustic ambiance which will instantly lift your spirits and make you feel at home. The high-vaulted ceiling is traditionally designed and has lighting hanging from it for an authentic vibe. Dine alfresco under the stars, or choose to dine indoors in the living area as you enjoy a freshly prepared meal in the fully-equipped kitchen. The kitchen is open-plan and is fitted with all modern appliances and amenities that you could possibly need for a nice, homely meal. It has been designed with polished cemented walls, and a separating mid-sized wall for a complete look.<br /><br />Beside daily housekeeping services, the kind and accommodating staff at the villa is happy to assist you in any way. Upon request, they can provide laundry service and even arrange for a car/driver to take you around. If you want them to plan any excursions or trips, they can do the needful!",
+              "locale": "en"
+            }
+          },
+          "type": "PRIMARY_DESCRIPTION"
+        },
+        {
+          "description": {
+            "en": {
+              "content": "Located in the town of Ambalangoda, Ratu Villa is a two-bedroom oceanfront holiday home overlooking the Indian Ocean. The town is close to the popular tourist destination Hikkaduwa famous for its corals. Relax in the rustic setup of Ratu Villa which can be rented in conjunction with its sister Nil Villa. It has been designed with a focus on comfort and by using eco-friendly material. The beach is right where the villa begins, so all you need to do is to step outside to be greeted by the most marvelous view!",
+              "locale": "en"
+            }
+          },
+          "type": "ABOUT_DESTINATION"
+        }
+      ],
+      "unitAvailability": {
+        "availabilityDefault": "N",
+        "changeoverDefault": "3",
+        "configuration": {
+          "availability": "NNNNYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN"
+        },
+        "dateRange": {
+          "endDate": "2022-01-31",
+          "startDate": "2019-02-01"
+        },
+        "instantBookableDefault": "N",
+        "maxStayDefault": 30,
+        "minPriorNotifyDefault": 0,
+        "minStayDefault": 0
+      }
+    },
+    "descriptiveName": "Ratu Villa",
+    "providerListingId": null,
+    "providerPublicURL": null,
+    "arePoliciesValid": true,
+    "staySynchronizeWithMaster": null,
+    "synchronizationMode": "SYNCHRONIZATION_MODE_FULL",
+    "policiesError": null,
+    "listingImportId": null,
+    "listingStatus": null,
+    "statusNotes": null,
+    "userMutations": null,
+    "channel": {
+      "id": "b5783f28-9be8-4545-827b-b72e44fdef81",
+      "descriptiveName": "BeeNest",
+      "defaultSettings": {
+        "id": "d48ac9ec-96f9-46a6-8fcc-4e69821c640c",
+        "bookingSource": null,
+        "descriptiveName": "(C) BeeNest Settings",
+        "logo": {
+          "id": "199",
+          "publicUrl": "https://s3-eu-west-1.amazonaws.com/lycan-general/uploads/logo/0001/01/785332dfd6241543f3c6c51470164d63fbf55012.png",
+          "width": 689,
+          "height": 120
+        },
+        "brandCompanyName": "Eats and Retreats",
+        "website": "https://www.eatsandretreats.com/",
+        "biography": "Travel South East Asia in style with our portfolio of over 1,000 luxury villas throughout Thailand, Bali & Sri Lanka",
+        "phone": null,
+        "emails": [
+          "reservation@eatsandretreats.com"
+        ]
+      },
+      "baseUrl": null,
+      "defaultPriceCalculationStrategy": "HIGHEST_RATE",
+      "lodgingRateGenerationStrategy": [],
+      "discr": "brand",
+      "_links": {
+        "channels:listings": {
+          "href": "/api/channels/b5783f28-9be8-4545-827b-b72e44fdef81/listings"
+        }
+      }
+    },
+    "discr": "listing"
+  }
+}

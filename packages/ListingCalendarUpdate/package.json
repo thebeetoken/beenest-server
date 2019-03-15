@@ -1,0 +1,12 @@
+{
+  "name": "CalendarUpdate",
+  "version": "0.0.1",
+  "description": "Update calendars every 10 minutes",
+  "author": "me",
+  "private": true,
+  "keywords": [],
+  "devDependencies": {},
+  "dependencies": {
+    "node-fetch": "^2.1.2"
+  }
+}

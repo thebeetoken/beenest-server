@@ -1,0 +1,89 @@
+{
+  "data": {
+    "id": "b5783f28-9be8-4545-827b-b72e44fdef81",
+    "descriptiveName": "BeeNest",
+    "memberMappings": [{
+      "id": "796937f0-6814-4fc4-9ae1-b4887e6ce87d",
+      "channel": null,
+      "channelMember": {
+        "id": 2013,
+        "memberSettings": [],
+        "member": {},
+        "memberType": null,
+        "boostScore": null,
+        "isPremiumMember": null,
+        "membershipPolicy": null
+      },
+      "settings": {
+        "id": "d48ac9ec-96f9-46a6-8fcc-4e69821c640c",
+        "bookingSource": null,
+        "descriptiveName": "(C) BeeNest Settings",
+        "logo": {
+          "id": "199",
+          "publicUrl": "https://s3-eu-west-1.amazonaws.com/lycan-general/uploads/logo/0001/01/785332dfd6241543f3c6c51470164d63fbf55012.png",
+          "width": 689,
+          "height": 120
+        },
+        "brandCompanyName": "Eats and Retreats",
+        "website": "https://www.eatsandretreats.com/",
+        "biography": "Travel South East Asia in style with our portfolio of over 1,000 luxury villas throughout Thailand, Bali & Sri Lanka",
+        "phone": null,
+        "emails": ["reservation@eatsandretreats.com"]
+      }
+    },
+    {
+      "id": "beenest-id",
+      "channel": null,
+      "channelMember": {
+        "id": 2014,
+        "memberSettings": [],
+        "member": {},
+        "memberType": null,
+        "boostScore": null,
+        "isPremiumMember": null,
+        "membershipPolicy": null
+      },
+      "settings": {
+        "id": "beenest-settings-id",
+        "bookingSource": null,
+        "descriptiveName": "(C) BeeNest Settings",
+        "logo": {
+          "id": "200",
+          "publicUrl": "https://s3-eu-west-1.amazonaws.com/lycan-general/uploads/logo/0001/01/785332dfd6241543f3c6c51470164d63fbf55012.png",
+          "width": 689,
+          "height": 120
+        },
+        "brandCompanyName": "Beenest and Beetoken",
+        "website": "https://www.beenest.com/",
+        "biography": "We Beetoken",
+        "phone": null,
+        "emails": ["support@beetoken.com"]
+      }
+    }],
+    "defaultSettings": {
+      "id": "beenest-settings-id",
+      "bookingSource": null,
+      "descriptiveName": "(C) BeeNest Settings",
+      "logo": {
+        "id": "199",
+        "publicUrl": "https://s3-eu-west-1.amazonaws.com/lycan-general/uploads/logo/0001/01/785332dfd6241543f3c6c51470164d63fbf55012.png",
+        "width": 689,
+        "height": 120
+      },
+      "brandCompanyName": "Eats and Retreats",
+      "website": "https://www.eatsandretreats.com/",
+      "biography": "Travel South East Asia in style with our portfolio of over 1,000 luxury villas throughout Thailand, Bali & Sri Lanka",
+      "phone": null,
+      "emails": ["reservation@eatsandretreats.com"]
+    },
+    "baseUrl": null,
+    "defaultPriceCalculationStrategy": "HIGHEST_RATE",
+    "lodgingRateGenerationStrategy": [],
+    "discr": "brand",
+    "_links": {
+      "channels:listings": {
+        "href": "/api/channels/b5783f28-9be8-4545-827b-b72e44fdef81/listings"
+      }
+    }
+  }
+}

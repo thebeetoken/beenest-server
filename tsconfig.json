@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "sourceMap": false,
+    "declaration": false,
+    "skipLibCheck": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "allowUnusedLabels": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "removeComments": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "rootDir": "src",
+    "outDir": "dist",
+    "baseUrl": "",
+    "paths": {
+    },
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "types": [ "node" ],
+    "lib": [ 
+      "dom",
+      "es5",
+      "es6",
+      "esnext",
+      "scripthost"
+    ]
+  },
+  "files": [
+    "custom.d.ts"
+  ],
+  "include": [ ],
+  "exclude": [
+    "node_modules"
+  ]
+}

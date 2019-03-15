@@ -1,0 +1,12 @@
+{
+  "name": "BookingExpiration",
+  "version": "0.0.1",
+  "description": "Expire bookings every 10 minutes",
+  "author": "me",
+  "private": true,
+  "keywords": [],
+  "devDependencies": {},
+  "dependencies": {
+    "node-fetch": "^2.1.2"
+  }
+}

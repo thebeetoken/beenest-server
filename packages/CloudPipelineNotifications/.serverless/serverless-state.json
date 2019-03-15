@@ -1,0 +1,190 @@
+{
+  "service": {
+    "service": "CloudPipelineNotifications",
+    "serviceObject": {
+      "name": "CloudPipelineNotifications"
+    },
+    "provider": {
+      "stage": "production",
+      "region": "us-west-2",
+      "variableSyntax": "\\${([ ~:a-zA-Z0-9._'\",\\-\\/\\(\\)]+?)}",
+      "name": "aws",
+      "runtime": "nodejs8.10",
+      "versionFunctions": true,
+      "remoteFunctionData": null,
+      "compiledCloudFormationTemplate": {
+        "AWSTemplateFormatVersion": "2010-09-09",
+        "Description": "The AWS CloudFormation template for this Serverless application",
+        "Resources": {
+          "ServerlessDeploymentBucket": {
+            "Type": "AWS::S3::Bucket"
+          },
+          "SendCodepipelineMsgLogGroup": {
+            "Type": "AWS::Logs::LogGroup",
+            "Properties": {
+              "LogGroupName": "/aws/lambda/CloudPipelineNotifications-production-sendCodepipelineMsg"
+            }
+          },
+          "IamRoleLambdaExecution": {
+            "Type": "AWS::IAM::Role",
+            "Properties": {
+              "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                  {
+                    "Effect": "Allow",
+                    "Principal": {
+                      "Service": [
+                        "lambda.amazonaws.com"
+                      ]
+                    },
+                    "Action": [
+                      "sts:AssumeRole"
+                    ]
+                  }
+                ]
+              },
+              "Policies": [
+                {
+                  "PolicyName": {
+                    "Fn::Join": [
+                      "-",
+                      [
+                        "production",
+                        "CloudPipelineNotifications",
+                        "lambda"
+                      ]
+                    ]
+                  },
+                  "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                      {
+                        "Effect": "Allow",
+                        "Action": [
+                          "logs:CreateLogStream"
+                        ],
+                        "Resource": [
+                          {
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/CloudPipelineNotifications-production-sendCodepipelineMsg:*"
+                          }
+                        ]
+                      },
+                      {
+                        "Effect": "Allow",
+                        "Action": [
+                          "logs:PutLogEvents"
+                        ],
+                        "Resource": [
+                          {
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/CloudPipelineNotifications-production-sendCodepipelineMsg:*:*"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "Path": "/",
+              "RoleName": {
+                "Fn::Join": [
+                  "-",
+                  [
+                    "CloudPipelineNotifications",
+                    "production",
+                    "us-west-2",
+                    "lambdaRole"
+                  ]
+                ]
+              }
+            }
+          },
+          "SendCodepipelineMsgLambdaFunction": {
+            "Type": "AWS::Lambda::Function",
+            "Properties": {
+              "Code": {
+                "S3Bucket": {
+                  "Ref": "ServerlessDeploymentBucket"
+                },
+                "S3Key": "serverless/CloudPipelineNotifications/production/1533055587976-2018-07-31T16:46:27.976Z/CloudPipelineNotifications.zip"
+              },
+              "FunctionName": "CloudPipelineNotifications-production-sendCodepipelineMsg",
+              "Handler": "index.sendCodepipelineMsg",
+              "MemorySize": 1024,
+              "Role": {
+                "Fn::GetAtt": [
+                  "IamRoleLambdaExecution",
+                  "Arn"
+                ]
+              },
+              "Runtime": "nodejs8.10",
+              "Timeout": 6
+            },
+            "DependsOn": [
+              "SendCodepipelineMsgLogGroup",
+              "IamRoleLambdaExecution"
+            ]
+          },
+          "SendCodepipelineMsgLambdaVersiondMPFfeM0iQaZrfJU9ds6zv8PfSrS2Hc2JtAaKNZnQo": {
+            "Type": "AWS::Lambda::Version",
+            "DeletionPolicy": "Retain",
+            "Properties": {
+              "FunctionName": {
+                "Ref": "SendCodepipelineMsgLambdaFunction"
+              },
+              "CodeSha256": "iTrZIXi7J8crxM9wdNQ6zYT0y2auCkUHz8ESNchog7Q="
+            }
+          }
+        },
+        "Outputs": {
+          "ServerlessDeploymentBucketName": {
+            "Value": {
+              "Ref": "ServerlessDeploymentBucket"
+            }
+          },
+          "SendCodepipelineMsgLambdaFunctionQualifiedArn": {
+            "Description": "Current Lambda function version",
+            "Value": {
+              "Ref": "SendCodepipelineMsgLambdaVersiondMPFfeM0iQaZrfJU9ds6zv8PfSrS2Hc2JtAaKNZnQo"
+            }
+          }
+        }
+      },
+      "coreCloudFormationTemplate": {
+        "AWSTemplateFormatVersion": "2010-09-09",
+        "Description": "The AWS CloudFormation template for this Serverless application",
+        "Resources": {
+          "ServerlessDeploymentBucket": {
+            "Type": "AWS::S3::Bucket"
+          }
+        },
+        "Outputs": {
+          "ServerlessDeploymentBucketName": {
+            "Value": {
+              "Ref": "ServerlessDeploymentBucket"
+            }
+          }
+        }
+      },
+      "vpc": {}
+    },
+    "pluginsData": {},
+    "functions": {
+      "sendCodepipelineMsg": {
+        "handler": "index.sendCodepipelineMsg",
+        "events": [],
+        "name": "CloudPipelineNotifications-production-sendCodepipelineMsg",
+        "package": {},
+        "memory": 1024,
+        "timeout": 6,
+        "runtime": "nodejs8.10",
+        "vpc": {}
+      }
+    },
+    "artifact": "/Users/tommy/src/beetoken/bee-lambdas/CloudPipelineNotifications/.serverless/CloudPipelineNotifications.zip"
+  },
+  "package": {
+    "artifactDirectoryName": "serverless/CloudPipelineNotifications/production/1533055587976-2018-07-31T16:46:27.976Z",
+    "artifact": "CloudPipelineNotifications.zip"
+  }
+}
