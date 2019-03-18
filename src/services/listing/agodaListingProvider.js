@@ -85,16 +85,16 @@ class AgodaListingProvider {
     const agodaListing = await AgodaListing.findOne({ where: { id } });
 
     if (!agodaListing) {
-      const error = new Error('No Agoda host found; is AGODA_HOST_EMAIL configured correctly?');
-      error.code = errors.NO_USER_FOUND;
+      const error = new Error('No such listing.');
+      error.code = errors.NOT_FOUND;
       throw error;
     }
 
     const host = await User.findOne({ where: { email: agodaHostEmail } });
 
     if (!host) {
-      const error = new Error('No such listing.');
-      error.code = errors.NOT_FOUND;
+      const error = new Error('No Agoda host found; is AGODA_HOST_EMAIL configured correctly?');
+      error.code = errors.NO_USER_FOUND;
       throw error;
     }
 
