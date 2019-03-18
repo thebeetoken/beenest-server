@@ -53,13 +53,14 @@ class AgodaListingProvider {
       (a, b) => a.distanceFrom(queryCoordinates) - b.distanceFrom(queryCoordinates)
     ) : filteredListings;
     const host = await User.findOne({ where: { email: agodaHostEmail } });
-    const convertedListings = sortedListings.map(
-      listing => Listing.build(listing.toListing(host, pricing))
-    );
 
     if (!host) {
       return [];
     }
+
+    const convertedListings = sortedListings.map(
+      listing => Listing.build(listing.toListing(host, pricing))
+    );
 
     if (!checkOutDate && !checkInDate) {
       return convertedListings;
@@ -82,9 +83,23 @@ class AgodaListingProvider {
   async getListingById(listingId, opts) {
     const id = parseInt(listingId.replace(/^.*_/, ''));
     const agodaListing = await AgodaListing.findOne({ where: { id } });
+
+    if (!agodaListing) {
+      const error = new Error('No such listing.');
+      error.code = errors.NOT_FOUND;
+      throw error;
+    }
+
     const host = await User.findOne({ where: { email: agodaHostEmail } });
+
+    if (!host) {
+      const error = new Error('No Agoda host found; is AGODA_HOST_EMAIL configured correctly?');
+      error.code = errors.NO_USER_FOUND;
+      throw error;
+    }
+
     const pricing = await AgodaAPI.getPricing({ hotelIds: [id], ...opts });
-    return host ? Listing.build(agodaListing.toListing(host, pricing)) : undefined;
+    return Listing.build(agodaListing.toListing(host, pricing));
   }
 }
 
