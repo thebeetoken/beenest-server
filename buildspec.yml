@@ -10,6 +10,7 @@ phases:
   pre_build:
     commands:
       - npm i
+      - curl --fail $DOT_ENV_URL > .env
   build:
     commands:
       - echo Build started on `date`
