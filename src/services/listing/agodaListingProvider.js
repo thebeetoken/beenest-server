@@ -53,13 +53,14 @@ class AgodaListingProvider {
       (a, b) => a.distanceFrom(queryCoordinates) - b.distanceFrom(queryCoordinates)
     ) : filteredListings;
     const host = await User.findOne({ where: { email: agodaHostEmail } });
-    const convertedListings = sortedListings.map(
-      listing => Listing.build(listing.toListing(host, pricing))
-    );
 
     if (!host) {
       return [];
     }
+
+    const convertedListings = sortedListings.map(
+      listing => Listing.build(listing.toListing(host, pricing))
+    );
 
     if (!checkOutDate && !checkInDate) {
       return convertedListings;
