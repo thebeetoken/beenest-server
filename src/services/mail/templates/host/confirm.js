@@ -41,8 +41,7 @@ module.exports = ({ guest, host, booking, listing }) => beemail({
     <br>
   `,
   conclusion: `
-    Please respond to this email within 24 hours to confirm this booking.
-    If we do not receive any response from you within 24 hours, we will cancel this booking.
+    Please visit ${settings.beenestHost}/host/bookings within 24 hours to accept this booking.
     <br>
     <br>
   `,

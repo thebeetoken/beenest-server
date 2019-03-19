@@ -32,7 +32,6 @@ database connections.
 
 This can be:
 * `development` - running on your local machine
-* `testnet` - https://api-testnet.beetoken.com
 * `test` - running unit and functional tests
 * `staging` - https://api-staging.beetoken.com
 * `production` - https://api.beetoken.com
@@ -47,8 +46,7 @@ npm i
 npm run dev
 ```
 
-2. Option B
-
+2. Option B (This is helpful when you want to run a local version of MySQL)
 ```
 docker-compose up
 ```
@@ -62,13 +60,11 @@ npm test
 ## Deploy
 
 ### master
-``git push master`` will deploy to staging: https://api-staging.beetoken.com/ and https://api-testnet.beetoken.com/
-
+When you merge a PR into `master`, AWS Codepipeline will deploy to staging: https://api-staging.beetoken.com/
 https://us-west-2.console.aws.amazon.com/codepipeline/home?region=us-west-2#/view/beenest-backend-master-pipeline
 
 ### production
 
-``git checkout production && git merge master && git push`` will deploy to production: http://beenest-backend-production.us-west-2.elasticbeanstalk.com | https://api.beetoken.com/
-
+When you merge `master` into `production` branch, AWS Codepipeline will deploy to production: https://api.beetoken.com/
 https://us-west-2.console.aws.amazon.com/codepipeline/home?region=us-west-2#/view/beenest-backend-production-pipeline
 
