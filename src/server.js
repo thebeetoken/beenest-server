@@ -1,4 +1,3 @@
-const AWSXRay = require('./services/tracer');
 const Raven = require('raven');
 const { ApolloServer } = require('apollo-server-express');
 const { ApolloError, AuthenticationError } = require('apollo-server');
@@ -72,9 +71,6 @@ const server = new ApolloServer({
 
 // sentry is remote error reporting
 if (isProfileErrorHandlerEnabled) {
-  AWSXRay.config([AWSXRay.plugins.EC2Plugin, AWSXRay.plugins.ElasticBeanstalkPlugin]);
-  app.use(AWSXRay.express.openSegment('beenest-backend'));
-
   logger.info('Sentry Enabled.');
   Raven.config(sentryUrl, {
     parseUser: req => {
