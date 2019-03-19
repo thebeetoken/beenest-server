@@ -217,7 +217,7 @@ module.exports = ({
                   </a>
                   <br/>
                   <br/>
-                  <p class="legal-line">©2017-2018 Beenest Inc. All Rights Reserved.</p>
+                  <p class="legal-line">©2017-2019 Beenest Inc. All Rights Reserved.</p>
                   <br/>
                 </td>
               </tr>
