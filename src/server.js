@@ -101,7 +101,6 @@ app.use(httpLogger('combined'));
 app.use(bodyParser.json({ limit: '50mb' }), bodyParser.urlencoded({ extended: false }));
 
 if (isProfileErrorHandlerEnabled) {
-  app.use(AWSXRay.express.closeSegment());
   app.use(Raven.errorHandler());
 }
 
