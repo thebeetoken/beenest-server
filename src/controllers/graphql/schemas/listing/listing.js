@@ -281,7 +281,7 @@ const resolvers = {
   Query: {
     allListings: async (_, { input }, { user }) => {
       if (!user || !user.isAdmin()) {
-        throw new AuthenticationError('You are not authorized to see all listings.');
+        throw new AuthenticationError('You are not authorized to see all listings. Are cookies enabled?');
       }
       const { listings, count } = await ListingService.getAllListings(input);
       return {
@@ -291,7 +291,7 @@ const resolvers = {
     },
     hostListings: async (_, {}, { user }) => {
       if (!user) {
-        throw new AuthenticationError('You are not logged in.');
+        throw new AuthenticationError('You are not logged in. Are cookies enabled?');
       }
       const listings = await ListingService.getHostListings(user.id);
       return listings.map(listing => listing.toJSON());
@@ -330,7 +330,7 @@ const resolvers = {
     activateListing: async (_, { id }, { user }) => {
       const listing = await ListingService.getListingById(id);
       if (!user || !user.canPublish(listing)) {
-        throw new AuthenticationError('You are not authorized to activate this listing.');
+        throw new AuthenticationError('You are not authorized to activate this listing. Are cookies enabled?');
       }
       return await ListingService.activateListing(id, user);
     },
@@ -344,14 +344,14 @@ const resolvers = {
     deactivateListing: async (_, { id }, { user }) => {
       const listing = await ListingService.getListingById(id);
       if (!user || !user.canPublish(listing)) {
-        throw new AuthenticationError('You are not authorized to deactivate this listing.');
+        throw new AuthenticationError('You are not authorized to deactivate this listing. Are cookies enabled?');
       }
       return await ListingService.deactivateListing(id);
     },
     deleteListing: async (_, { id }, { user }) => {
       const listing = await ListingService.getListingById(id);
       if (!user || !user.canEdit(listing)) {
-        throw new AuthenticationError('You are not authorized to delete this listing.');
+        throw new AuthenticationError('You are not authorized to delete this listing. Are cookies enabled?');
       }
       const deletedListing = await ListingService.deleteListing(id);
       return deletedListing.toJSON({ requestor: user });
@@ -359,7 +359,7 @@ const resolvers = {
     duplicateListing: async (_, { id }, { user }) => {
       const listing = await ListingService.getListingById(id);
       if (!user || !user.canEdit(listing)) {
-        throw new AuthenticationError('You are not authorized to duplicate this listing.');
+        throw new AuthenticationError('You are not authorized to duplicate this listing. Are cookies enabled?');
       }
       const duplicatedListing = await ListingService.duplicateListing(id, user);
       return duplicatedListing.toJSON({ requestor: user });
@@ -367,7 +367,7 @@ const resolvers = {
     updateListing: async (_, { id, input }, { user }) => {
       const listing = await ListingService.getListingById(id);
       if (!user || !user.canEdit(listing)) {
-        throw new AuthenticationError('You are not logged in.');
+        throw new AuthenticationError('You are not logged in. Are cookies enabled?');
       }
       const updatedListing = await ListingService.updateListing(
         { id, ...input },

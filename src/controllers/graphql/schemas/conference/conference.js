@@ -114,7 +114,7 @@ const resolvers = {
     },
     allConferences: async (_, {}, { user }) => {
       if (!user || !user.isAdmin()) {
-        throw new ForbiddenError('Unauthorized');
+        throw new ForbiddenError('Unauthorized. Are cookies enabled?');
       }
       const conferences = await ConferenceService.getAll();
       return conferences.map(conference => conference.toJSON());
@@ -127,7 +127,7 @@ const resolvers = {
   Mutation: {
     createConference: async (root, { input }, { user }) => {
       if (!user || !user.isAdmin()) {
-        throw new ForbiddenError('Unauthorized');
+        throw new ForbiddenError('Unauthorized. Are cookies enabled?');
       }
       await ConferenceService.create(input)
         .then(conference => {
@@ -144,14 +144,14 @@ const resolvers = {
     },
     updateConference: async (root, { id, input }, { user }) => {
       if (!user || !user.isAdmin()) {
-        throw new ForbiddenError('Unauthorized');
+        throw new ForbiddenError('Unauthorized. Are cookies enabled?');
       }
       const conference = await ConferenceService.update({ id, ...input });
       return conference.toJSON();
     },
     deleteConference: async (root, { id }, { user }) => {
       if (!user || !user.isAdmin()) {
-        throw new ForbiddenError('Unauthorized');
+        throw new ForbiddenError('Unauthorized. Are cookies enabled?');
       }
       const result = await ConferenceService.delete(id);
       return {deleted: result > 0};
