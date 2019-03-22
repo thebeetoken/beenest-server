@@ -154,28 +154,28 @@ const resolvers = {
   Query: {
     user: async (_, {}, { user }) => {
       if (!user) {
-        throw new AuthenticationError('You are not logged in.');
+        throw new AuthenticationError('You are not logged in. Are cookies enabled?');
       }
       const foundUser = await UserService.getById(user.id);
       return foundUser.toJSON({requestor: user});
     },
     allUsers: async (_, {}, { user }) => {
       if (!user || !user.isAdmin()) {
-        throw new ForbiddenError('You are not authorized.');
+        throw new ForbiddenError('You are not authorized. Are cookies enabled?');
       }
       const users = await UserService.getAllUsers();
       return users.map(user => user.toJSON({ requestor: user }));
     },
     getUserById: async (_, { id }, { user }) => {
       if (!user || !user.isAdmin()) {
-        throw new ForbiddenError('You are not authorized.');
+        throw new ForbiddenError('You are not authorized. Are cookies enabled?');
       }
       const foundUser = await UserService.getById(id);
       return foundUser.toJSON({requestor: user});
     },
     searchHosts: async (_, { input }, { user }) => {
       if (!user || !user.isAdmin()) {
-        throw new ForbiddenError('You are not authorized.');
+        throw new ForbiddenError('You are not authorized. Are cookies enabled?');
       }
       const { users, count } = await UserService.search({ ...input, isHost: true });
       return {
@@ -185,7 +185,7 @@ const resolvers = {
     },
     searchUsers: async (_, { input }, { user }) => {
       if (!user || !user.isAdmin()) {
-        throw new ForbiddenError('You are not authorized.');
+        throw new ForbiddenError('You are not authorized. Are cookies enabled?');
       }
       const { users, count } = await UserService.search({ ...input });
       return {
@@ -197,13 +197,13 @@ const resolvers = {
   Mutation: {
     adminCreateHost: async (_, { input }, { user }) => {
       if (!user || !user.isAdmin()) {
-        throw new ForbiddenError('You are not authorized.');
+        throw new ForbiddenError('You are not authorized. Are cookies enabled?');
       }
       return await UserService.adminCreateHost(input);
     },
     createOrLoginWithProviders: async (_, { id }, { user }) => {
       if (user) {
-        const error = new AuthenticationError('You are already logged in.');
+        const error = new AuthenticationError('You are already logged in. Are cookies enabled?');
         error.code = errors.ALREADY_LOGGED_IN;
         throw error;
       }
@@ -211,7 +211,7 @@ const resolvers = {
     },
     createUser: async (_, { input }, { user }) => {
       if (user) {
-        const error = new AuthenticationError('You are already logged in.');
+        const error = new AuthenticationError('You are already logged in. Are cookies enabled?');
         error.code = errors.ALREADY_LOGGED_IN;
         throw error;
       }
@@ -219,7 +219,7 @@ const resolvers = {
     },
     createHost: async (_, { input }, { user }) => {
       if (user) {
-        const error = new AuthenticationError('You are already logged in.');
+        const error = new AuthenticationError('You are already logged in. Are cookies enabled?');
         error.code = errors.ALREADY_LOGGED_IN;
         throw error;
       }
@@ -227,33 +227,33 @@ const resolvers = {
     },
     deleteUser: async (_, { id }, { user }) => {
       if (!user || !user.isAdmin()) {
-        throw new ForbiddenError('You are not authorized.');
+        throw new ForbiddenError('You are not authorized. Are cookies enabled?');
       }
       const deletedUser = await UserService.deleteUser(id);
       return deletedUser.toJSON({ requestor: user });
     },
     createStripeLoginLink: async (_, { }, { user }) => {
       if (!user) {
-        throw new AuthenticationError('You are not logged in.');
+        throw new AuthenticationError('You are not logged in. Are cookies enabled?');
       }
       return await stripe.createStripeLoginLink(user);
     },
     refreshVerificationStatus: async (_, { }, { user }) => {
       if (!user) {
-        throw new AuthenticationError('You are not logged in.');
+        throw new AuthenticationError('You are not logged in. Are cookies enabled?');
       }
       const updatedUserVerificationStatus = await UserService.refreshVerificationStatus(user.id);
       return updatedUserVerificationStatus.toJSON();
     },
     updateHost: async (_, { input }, { user }) => {
       if (!user || !user.isAdmin()) {
-        throw new ForbiddenError('You are not authorized.');
+        throw new ForbiddenError('You are not authorized. Are cookies enabled?');
       }
       return await UserService.updateHost(input, user);
     },
     updateWalletAddress: async (_, { input }, { user }) => {
       if (!user) {
-        const error = new AuthenticationError('You are not logged in.');
+        const error = new AuthenticationError('You are not logged in. Are cookies enabled?');
         error.code = errors.NOT_LOGGED_IN;
         throw error;
       }
@@ -263,14 +263,14 @@ const resolvers = {
     },
     updateUser: async(_, { input }, { user }) => {
       if (!user) {
-        throw new AuthenticationError('You are not logged in.');
+        throw new AuthenticationError('You are not logged in. Are cookies enabled?');
       }
       const updatedUser = await UserService.updateUser(input, user);
       return updatedUser.toJSON({ requestor: user });
     },
     contactUser: async(_, { input }, { user }) => {
       if (!user) {
-        throw new AuthenticationError('You are not logged in.');
+        throw new AuthenticationError('You are not logged in. Are cookies enabled?');
       }
       const { bookingId, listingId, message, recipientId, subject } = input;
       const recipient = await UserService.getById(recipientId);

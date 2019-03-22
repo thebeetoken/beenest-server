@@ -161,21 +161,21 @@ const resolvers = {
   Query: {
     allBookings: async (_, {}, { user }) => {
       if (!user || !user.isAdmin()) {
-        return new AuthenticationError('You are not authorized to view all bookings.');
+        return new AuthenticationError('You are not authorized to view all bookings. Are cookies enabled?');
       }
       const bookings = await BookingService.getAllBookings({limit: 100});
       return bookings.map(booking => booking.toJSON());
     },
     booking: async (_, { id }, { user }) => {
       if (!user) {
-        return new AuthenticationError('You are not authorized to view this booking.');
+        return new AuthenticationError('You are not authorized to view this booking. Are cookies enabled?');
       }
       const booking = await BookingService.getById(id, user);
       return booking.toJSON();
     },
     guestBookings: async (_, { status }, { user }) => {
       if (!user) {
-        return new AuthenticationError('You are not authorized to view these bookings.');
+        return new AuthenticationError('You are not authorized to view these bookings. Are cookies enabled?');
       }
       if (!status) {
         const bookings = await BookingService.getGuestBookings(user.id);
@@ -186,7 +186,7 @@ const resolvers = {
     },
     hostBookings: async (_, { input }, { user }) => {
       if (!user) {
-        return new AuthenticationError('You are not authorized to view these bookings.');
+        return new AuthenticationError('You are not authorized to view these bookings. Are cookies enabled?');
       }
       const bookings = await BookingService.getHostBookings(user.id, input);
       return bookings.map(booking => booking.toJSON());
@@ -195,7 +195,7 @@ const resolvers = {
   Mutation: {
     approveBooking: async (_, { id }, { user }) => {
       if (!user || !(user.isAdmin() || await BookingService.isHostToBooking(user.id, id))) {
-        return new AuthenticationError('You are not authorized to approve this booking.');
+        return new AuthenticationError('You are not authorized to approve this booking. Are cookies enabled?');
       }
 
       const booking = await BookingService.approveBooking(id, user);
@@ -203,56 +203,56 @@ const resolvers = {
     },
     cancelBooking: async (_, { id }, { user }) => {
       if (!user || !(user.isAdmin() || await BookingService.isHostToBooking(user.id, id))) {
-        return new AuthenticationError('You are not authorized to cancel this booking.');
+        return new AuthenticationError('You are not authorized to cancel this booking. Are cookies enabled?');
       }
       const booking = await BookingService.cancelBooking(id, user);
       return booking.toJSON();
     },
     createBooking: async (_, { input }, { user }) => {
       if (!user) {
-        return new AuthenticationError('You are not authorized to create this booking');
+        return new AuthenticationError('You are not authorized to create this booking. Are cookies enabled?');
       }
       const booking = await BookingService.createBookingWithQuotes(input, user);
       return booking.toJSON();
     },
     guestCancelBooking: async (_, { id }, { user }) => {
       if (!user) {
-        return new AuthenticationError('You are not authorized to cancel this booking.');
+        return new AuthenticationError('You are not authorized to cancel this booking. Are cookies enabled?');
       }
       const booking = await BookingService.guestCancelBooking(id, user);
       return booking.toJSON();
     },
     guestConfirmBooking: async (_, { input }, { user }) => {
       if (!user) {
-        return new AuthenticationError('You are not authorized to confirm this booking.');
+        return new AuthenticationError('You are not authorized to confirm this booking. Are cookies enabled?');
       }
       const booking = await BookingService.guestConfirmBooking(input, user);
       return booking.toJSON();
     },
     guestRejectPayment: async (_, { id }, { user }) => {
       if (!user) {
-        return new AuthenticationError('You are not authorized to reject this payment.');
+        return new AuthenticationError('You are not authorized to reject this payment. Are cookies enabled?');
       }
       const booking = await BookingService.guestRejectPayment(id, user);
       return booking.toJSON();
     },
     guestSelectPayment: async (_, { input }, { user }) => {
       if (!user) {
-        return new AuthenticationError('You are not authorized to select this payment.');
+        return new AuthenticationError('You are not authorized to select this payment. Are cookies enabled?');
       }
       const booking = await BookingService.guestSelectPayment(input, user);
       return booking.toJSON();
     },
     rejectBooking: async (_, { id }, { user }) => {
       if (!user || !(user.isAdmin() || await BookingService.isHostToBooking(user.id, id))) {
-        return new AuthenticationError('You are not authorized to reject this booking.');
+        return new AuthenticationError('You are not authorized to reject this booking. Are cookies enabled?');
       }
       const booking = await BookingService.rejectBooking(id, user);
       return booking.toJSON();
     },
     payoutBooking: async (_, { id }, { user }) => {
       if (!user || !user.isAdmin()) {
-        return new AuthenticationError('You are not authorized to payout this booking.');
+        return new AuthenticationError('You are not authorized to payout this booking. Are cookies enabled?');
       }
       const booking = await BookingService.payoutBooking(id, user);
       return booking.toJSON();
