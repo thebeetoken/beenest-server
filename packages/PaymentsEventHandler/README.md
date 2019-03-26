@@ -24,7 +24,7 @@ in place of the `npm install` step, as:
   * **Verify**: Booking ID in database shows "host_approved"
 * Run `serverless invoke local -f pollEventsDev`
   * This needs environment variables (Ropsten values shown)
-    * ADMIN_SECRET=a12e05b9454889e95d3d384a6b2d1b9aea
-    * PAYMENTS_CONTRACT_ADDRESS=0x3A5Ad6a52582C18dad0a7D300f3a2bEac3E762e4
+    * ADMIN_SECRET=dev-events-secret
+    * PAYMENTS_CONTRACT_ADDRESS=0x6bC080D7dFfacF4E04F6a0FC46DCe0c459A6C004
     * INFURA_URL=https://ropsten.infura.io/v3/(key);
   * **Verify**: Booking ID in database shows "guest_paid"
