@@ -87,8 +87,18 @@ class BookingAggregator {
       tokenContractAddress,
       transactionHash,
     } = cryptoParams;
-    const host = await UserService.getById(booking.hostId);
+    const host = await UserService.getById(listing.hostId);
+    if (!host) {
+      const error = new Error('Could not find host information for this booking.');
+      error.code = errors.NOT_FOUND;
+      throw error;
+    }
     const hostWalletAddress = host.walletAddress;
+    if (!hostWalletAddress) {
+      const error = new Error('Could not find host payment information for this booking.');
+      error.code = errors.NOT_FOUND;
+      throw error;
+    }
     return booking.updateCryptoSource({
       guestWalletAddress,
       hostWalletAddress,
