@@ -8,7 +8,7 @@ let settings = {
   keenApiKey: process.env.KEEN_API_KEY,
   beenestHost: 'https://dev01.beenest.io',
   btcWalletAddress: '3AxdWezuK1yLbZni56y7EzxUS7rjJnPL6U',
-  paymentsContractAddress: '0x3a5ad6a52582c18dad0a7d300f3a2beac3e762e4', // Ropsten
+  paymentsContractAddress: '0x6bC080D7dFfacF4E04F6a0FC46DCe0c459A6C004', // Ropsten
   adminHostWalletAddress: '0xC711e5d504347E086022a82A72511F4CF4184fe2',
   agodaHostEmail: process.env.AGODA_HOST_EMAIL,
   agodaSiteId: process.env.AGODA_SITE_ID,
