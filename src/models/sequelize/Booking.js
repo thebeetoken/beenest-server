@@ -130,8 +130,8 @@ module.exports = (sequelize, DataTypes) => {
           if (['started', 'guest_confirmed'].includes(this.status)) {
             return 0;
           }
-          return datefns.differenceInDays(this.checkInDate, this.guestCancelledAt) > 7 ?
-            0.1 : 1;
+          const cancelledAt = this.guestCancelledAt || new Date();
+          return datefns.differenceInDays(this.checkInDate, cancelledAt) > 7 ? 0.1 : 1;
         }
       },
       numberOfNights: {

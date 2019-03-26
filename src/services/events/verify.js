@@ -5,7 +5,7 @@ const THIRTY_SIX_HOURS = 36 * 60 * 60 * 1000;
 const CLOSE_ENOUGH = 0.999;
 
 const feeVerifier = (key, booking, details) =>
-  booking.cancellationFee >= (details[key] * CLOSE_ENOUGH);
+  booking.cancellationFee >= (details[key] * CLOSE_ENOUGH) && booking.cancellationFee <= (details[key] * CLOSE_ENOUGH);
 const checkInVerifier = (key, booking, details) => {
   const timeDifference = booking[key].getTime() - details[key].getTime();
   return timeDifference >= 0 && timeDifference <= SEVEN_DAYS;
