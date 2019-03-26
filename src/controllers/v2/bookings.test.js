@@ -15,6 +15,7 @@ jest.mock('../../services/firebaseAuth', () => {
 });
 
 describe('/v2/bookings', () => {
+  const walletAddress = '0x1234123412341234123412341234123412341234';
   const guestFirebaseUserOpts = testUtils.createTrustedFirebaseUserOpts();
   const hostFirebaseUserOpts = testUtils.createTrustedFirebaseUserOpts();
   const adminFirebaseUserOpts = testUtils.createTrustedFirebaseUserOpts({
@@ -53,7 +54,7 @@ describe('/v2/bookings', () => {
     await testUtils.initializeDatabase();
 
     guest = await User.create({...guestFirebaseUserOpts, completedVerification: true});
-    host = await User.create(hostFirebaseUserOpts);
+    host = await User.create({ ...hostFirebaseUserOpts, walletAddress });
     admin = await User.create(adminFirebaseUserOpts);
     otherUser = await User.create(firebaseUserOpts);
 
