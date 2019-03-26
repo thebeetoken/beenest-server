@@ -9,7 +9,6 @@ let settings = {
   beenestHost: 'https://dev01.beenest.io',
   btcWalletAddress: '3AxdWezuK1yLbZni56y7EzxUS7rjJnPL6U',
   paymentsContractAddress: '0x6bC080D7dFfacF4E04F6a0FC46DCe0c459A6C004', // Ropsten
-  adminHostWalletAddress: '0xC711e5d504347E086022a82A72511F4CF4184fe2',
   agodaHostEmail: process.env.AGODA_HOST_EMAIL,
   agodaSiteId: process.env.AGODA_SITE_ID,
   agodaApiKey: process.env.AGODA_API_KEY
