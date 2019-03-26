@@ -127,7 +127,7 @@ module.exports = (sequelize, DataTypes) => {
       cancellationRate: {
         type: DataTypes.VIRTUAL,
         get: function () {
-          if (!this.approvedBy) {
+          if (['started', 'guest_confirmed'].includes(this.status)) {
             return 0;
           }
           return datefns.differenceInDays(this.checkInDate, this.guestCancelledAt) > 7 ?
