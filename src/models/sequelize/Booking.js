@@ -121,6 +121,12 @@ module.exports = (sequelize, DataTypes) => {
       cancellationFee: {
         type: DataTypes.VIRTUAL,
         get: function () {
+          return this.cancellationRate * (this.guestTotalAmount - this.guestDepositAmount);
+        }
+      },
+      cancellationRate: {
+        type: DataTypes.VIRTUAL,
+        get: function () {
           if (!this.approvedBy) {
             return 0;
           }
