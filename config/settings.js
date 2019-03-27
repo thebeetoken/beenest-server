@@ -20,12 +20,12 @@ if (process.env.APP_ENV === 'testnet') {
 
 if (process.env.APP_ENV === 'staging') {
   settings.beenestHost = 'https://staging.beenest.io';
-  settings.paymentsContractAddress = '0xb3C348c4a6D95fee050bF8A770fC91EC60aa4ab2';
+  settings.paymentsContractAddress = '0x5f72bd79e315da1d58e8a23cdb98a9e02085dacf';
 }
 
 if (process.env.APP_ENV === 'production') {
   settings.beenestHost = 'https://www.beenest.com';
-  settings.paymentsContractAddress = '0xb3C348c4a6D95fee050bF8A770fC91EC60aa4ab2';
+  settings.paymentsContractAddress = '0x5f72bd79e315da1d58e8a23cdb98a9e02085dacf';
 }
 
 module.exports = settings;
