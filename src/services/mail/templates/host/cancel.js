@@ -13,15 +13,15 @@ module.exports = ({ guest, host, booking, listing }) => beemail({
   introduction: `
     ${guest.firstName} has cancelled their request to stay at your place ${settings.beenestHost}/listings/${listing.id} at ${listing.fullAddress}
   `,
-  instructions: booking.cancellationFee > 0 ? `
+  instructions: booking.cancellationRate > 0 ? `
     Because this guest cancelled their booking
-    ${booking.cancellationFee === 1 ? ' less than 7 days before check in, ' : ' 7 or more days before check in, '}
-    they have been assessed a ${Math.floor(booking.cancellationFee * 100)}% cancellation fee.
+    ${booking.cancellationRate === 1 ? ' less than 7 days before check in, ' : ' 7 or more days before check in, '}
+    they have been assessed a ${Math.floor(booking.cancellationRate * 100)}% cancellation fee.
     <br>
     <p>This amount will be issued to your registered ${walletDescriptions[booking.currency]}.</p>
     <p>
       Cancellation Fee:
-      ${booking.guestTotalAmount} x ${Math.floor(booking.cancellationFee * 100)}% = ${(booking.guestTotalAmount * booking.cancellationFee).toFixed(2)} ${booking.currency}
+      ${booking.guestTotalAmount} x ${Math.floor(booking.cancellationRate * 100)}% = ${(booking.guestTotalAmount * booking.cancellationRate).toFixed(2)} ${booking.currency}
       <br/>
     </p>
   ` : '',

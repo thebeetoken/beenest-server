@@ -11,8 +11,8 @@ describe('EventService', () => {
   const testGuest = "0xC4357C4357C4357C4357C4357C4357C4357C4357";
   const price = 84800;
   const deposit = 4200;
-  const checkIn = 1000000;
-  const checkOut = 1008000;
+  const checkIn = Math.floor(Date.now() / 1000) + 14 * 24 * 60 * 60;
+  const checkOut = checkIn + 48 * 60 * 60;
   const testBookingOpts = {
     ...(testUtils.createTestBookingOpts()),
     guestWalletAddress: testGuest,

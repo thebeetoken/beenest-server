@@ -2,7 +2,6 @@ const idUtils = require('../../util/idUtils');
 const { CreditService } = require('../credit');
 const { UserService } = require('../user');
 const { MailService } = require('../mail');
-const settings = require('../../../config/settings');
 const { Booking } = require('../../models/sequelize');
 const errors = require('../../util/errors');
 
@@ -88,19 +87,26 @@ class BookingAggregator {
       tokenContractAddress,
       transactionHash,
     } = cryptoParams;
-    const hostWalletAddress = settings.adminHostWalletAddress;
-    const [host, updatedBooking] = await Promise.all([
-      UserService.getById(booking.hostId),
-      booking.updateCryptoSource({
-        guestWalletAddress,
-        hostWalletAddress,
-        paymentProtocolAddress,
-        tokenContractAddress,
-        guestTxHash: transactionHash,
-        status: 'guest_confirmed',
-      }),
-    ]);
-    return updatedBooking;
+    const host = await UserService.getById(listing.hostId);
+    if (!host) {
+      const error = new Error('Could not find host information for this booking.');
+      error.code = errors.NOT_FOUND;
+      throw error;
+    }
+    const hostWalletAddress = host.walletAddress;
+    if (!hostWalletAddress) {
+      const error = new Error('Could not find host payment information for this booking.');
+      error.code = errors.NOT_FOUND;
+      throw error;
+    }
+    return booking.updateCryptoSource({
+      guestWalletAddress,
+      hostWalletAddress,
+      paymentProtocolAddress,
+      tokenContractAddress,
+      guestTxHash: transactionHash,
+      status: 'guest_confirmed',
+    });
   }
 
 

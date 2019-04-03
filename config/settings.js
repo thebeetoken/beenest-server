@@ -8,8 +8,7 @@ let settings = {
   keenApiKey: process.env.KEEN_API_KEY,
   beenestHost: 'https://dev01.beenest.io',
   btcWalletAddress: '3AxdWezuK1yLbZni56y7EzxUS7rjJnPL6U',
-  paymentsContractAddress: '0x3a5ad6a52582c18dad0a7d300f3a2beac3e762e4', // Ropsten
-  adminHostWalletAddress: '0xC711e5d504347E086022a82A72511F4CF4184fe2',
+  paymentsContractAddress: '0x6bC080D7dFfacF4E04F6a0FC46DCe0c459A6C004', // Ropsten
   agodaHostEmail: process.env.AGODA_HOST_EMAIL,
   agodaSiteId: process.env.AGODA_SITE_ID,
   agodaApiKey: process.env.AGODA_API_KEY
@@ -21,12 +20,12 @@ if (process.env.APP_ENV === 'testnet') {
 
 if (process.env.APP_ENV === 'staging') {
   settings.beenestHost = 'https://staging.beenest.io';
-  settings.paymentsContractAddress = '0xb3C348c4a6D95fee050bF8A770fC91EC60aa4ab2';
+  settings.paymentsContractAddress = '0x5f72bd79e315da1d58e8a23cdb98a9e02085dacf';
 }
 
 if (process.env.APP_ENV === 'production') {
   settings.beenestHost = 'https://www.beenest.com';
-  settings.paymentsContractAddress = '0xb3C348c4a6D95fee050bF8A770fC91EC60aa4ab2';
+  settings.paymentsContractAddress = '0x5f72bd79e315da1d58e8a23cdb98a9e02085dacf';
 }
 
 module.exports = settings;

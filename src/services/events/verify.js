@@ -1,8 +1,12 @@
 const SEVEN_DAYS = 7 * 24 * 60 * 60 * 1000;
 const THIRTY_SIX_HOURS = 36 * 60 * 60 * 1000;
 
+// For floating point comparison
+const CLOSE_ENOUGH = 0.999;
+
 const feeVerifier = (key, booking, details) =>
-  (booking.guestTotalAmount - booking.guestDepositAmount) / 10 >= details[key];
+  booking.cancellationFee >= (details[key] * CLOSE_ENOUGH) &&
+  (booking.cancellationFee * CLOSE_ENOUGH) <= details[key];
 const checkInVerifier = (key, booking, details) => {
   const timeDifference = booking[key].getTime() - details[key].getTime();
   return timeDifference >= 0 && timeDifference <= SEVEN_DAYS;
